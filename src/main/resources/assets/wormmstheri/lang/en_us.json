@@ -1,4 +1,7 @@
 {
   "item.wormmstheri.theri_claws": "Therizinosaurus claws",
-  "item.wormmstheri.theri_sword": "Theri claws"
+  "item.wormmstheri.theri_sword": "Theri claws",
+  "item.wormmstheri.therizinosaurus_spawn_egg": "Therizinosaurus Spawn Egg",
+
+  "entity.wormmstheri.therizinosaurus": "Therizinosaurus"
 }

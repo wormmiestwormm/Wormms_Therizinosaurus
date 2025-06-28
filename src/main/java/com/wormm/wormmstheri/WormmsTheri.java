@@ -1,8 +1,11 @@
 package com.wormm.wormmstheri;
 
 import com.mojang.logging.LogUtils;
+import com.wormm.wormmstheri.entity.ModEntities;
+import com.wormm.wormmstheri.entity.client.TherizinosaurusRenderer;
 import com.wormm.wormmstheri.item.WormmsTheriCreativeModeTab;
 import com.wormm.wormmstheri.item.WormmsTheriItems;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -39,6 +42,7 @@ public class WormmsTheri
 
         WormmsTheriCreativeModeTab.register(modEventBus);
         WormmsTheriItems.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -58,6 +62,7 @@ public class WormmsTheri
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(WormmsTheriItems.THERI_CLAWS);
             event.accept(WormmsTheriItems.THERI_SWORD);
+            event.accept(WormmsTheriItems.THERIZINOSAURUS_SPAWN_EGG);
         }
     }
 
@@ -75,7 +80,7 @@ public class WormmsTheri
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            EntityRenderers.register(ModEntities.THERIZINOSAURUS.get(), TherizinosaurusRenderer::new);
         }
     }
 }

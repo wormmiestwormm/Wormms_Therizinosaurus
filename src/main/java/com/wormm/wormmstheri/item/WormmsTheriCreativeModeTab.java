@@ -19,6 +19,7 @@ public class WormmsTheriCreativeModeTab {
                     .displayItems((itemDisplayParemeters, output) -> {
                         output.accept(WormmsTheriItems.THERI_CLAWS.get());
                         output.accept(WormmsTheriItems.THERI_SWORD.get());
+                        output.accept(WormmsTheriItems.THERIZINOSAURUS_SPAWN_EGG.get());
                     }).build());
 
     public static void register(IEventBus eventBus){

@@ -1,9 +1,11 @@
 package com.wormm.wormmstheri.item;
 
 import com.wormm.wormmstheri.WormmsTheri;
+import com.wormm.wormmstheri.entity.ModEntities;
 import com.wormm.wormmstheri.item.custom.ModToolTiers;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -19,6 +21,9 @@ public class WormmsTheriItems {
     public static final RegistryObject<Item> THERI_SWORD = ITEMS.register("theri_sword",
             () -> new SwordItem(ModToolTiers.THERI, new Item.Properties()
                     .attributes(SwordItem.createAttributes(ModToolTiers.THERI, 3, -2.4f))));
+
+    public static final RegistryObject<Item> THERIZINOSAURUS_SPAWN_EGG = ITEMS.register("therizinosaurus_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.THERIZINOSAURUS, 0x53524b, 0xdac741, new Item.Properties()));
 
     public static void register (IEventBus eventBus){
         ITEMS.register(eventBus);
