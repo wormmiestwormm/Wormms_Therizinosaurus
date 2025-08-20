@@ -129,6 +129,7 @@ public class TherizinosaurusModel<T extends TherizinosaurusEntity> extends Hiera
 
         this.animateWalk(TherizinosaurusAnimations.ANIM_THERI_WALKING, limbSwing, limbSwingAmount, 2f, 2.5f);
         this.animate(entity.idleAnimationState, TherizinosaurusAnimations.ANIM_THERI_IDLE, ageInTicks, 1f);
+        this.animate(entity.attackAnimationState, TherizinosaurusAnimations.ANIM_THERI_ATTACK, ageInTicks);
     }
 
     private void applyHeadRotation(float pNetHeadYaw, float pHeadPitch){
